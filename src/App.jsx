@@ -1,11 +1,16 @@
+import React from "react";
 import { useState } from "react";
-import Home  from "./components/Home";
-import "./App.css";
-
+import Full from "./components/LandingPage/Full";
 function App() {
+  const [activePage, setActivePage] = useState(""); 
+
   return (
-    <div>
-      <Home />
+    <div className="bg-white ">
+      <Full setActive = {setActivePage} />
+
+      
+      {activePage === "Login" && <Login />}
+    
     </div>
   );
 }
